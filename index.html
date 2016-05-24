@@ -120,10 +120,8 @@
     </header>
     <div class="entry">
       
-        <h1 id="编程思想"><a href="#编程思想" class="headerlink" title="编程思想"></a>编程思想</h1><p>面向过程：处理事情以过程为核心，一步一步的实现。比如C语言。<br>面向对象：（面向对象编程(Object Oriented Programming,OOP,面向对象程序设计)是一种计算机编程架构）万物皆对象。比如OC。<br>链式编程思想：是将多个操作（多行代码）通过点号(.)链接在一起成为一句代码,使代码可读性好。a(1).b(2).c(3)比如我们使用的一些第三方框架<br>响应式编程思想：不需要考虑调用顺序，只需要知道考虑结果，类似于蝴蝶效应，产生一个事件，会影响很多东西，这些事件像流一样的传播出去，然后影响结果，借用面向对象的一句话，万物皆是流。<br>函数式编程思想：是把操作尽量写成一系列嵌套的函数或者方法调用。<br>ReactiveCocoa作用和导入使用<br>ReactiveCocoa（RAC）是什么？<br>ReactiveCocoa（其简称为 RAC）是由 Github 开源的一个应用于 iOS 和 OS X 开发的新框架。RAC 具有函数式编程和响应式编程的特性。它主要吸取了 .Net 的 Reactive Extensions 的设计和实现。<br>ReactiveCocoa为事件提供了很多处理方法，而且利用RAC处理事件很方便，可以把要处理的事情，和监听的事情的代码放在一起，这样非常方便我们管理，就不需要跳到对应的方法里。非常符合我们开发中高聚合，低耦合的思想。作为一个iOS开发者，你写的每一行代码几乎都是在响应某个事件，例如按钮的点击，收到网络消息，属性的变化（通过KVO）或者用户位置的变化（通过CoreLocation）。但是这些事件都用不同的方式来处理，比如action、delegate、KVO、callback等。ReactiveCocoa为事件定义了一个标准接口，从而可以使用一些基本工具来更容易的连接、过滤和组合。</p>
-<p>我们采用cocoapods配置ReactiveCocoa</p>
-<p>切记ReactiveCocoa 4.10 最低部署版本为iOS8,笔者亲测<br>platform:ios,’8.0’<br>use_frameworks!<br>pod ‘ReactiveCocoa’, ‘~&gt; 4.1.0’</p>
-<p>这样，我就成功导入ReactiveCocoa了！</p>
+        <h1 id="编程思想"><a href="#编程思想" class="headerlink" title="编程思想"></a>编程思想</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">面向过程：处理事情以过程为核心，一步一步的实现。比如C语言。</span><br><span class="line">面向对象：（面向对象编程(Object Oriented Programming,OOP,面向对象程序设计)是一种计算机编程架构）万物皆对象。比如OC。</span><br><span class="line">链式编程思想：是将多个操作（多行代码）通过点号(.)链接在一起成为一句代码,使代码可读性好。a(1).b(2).c(3)比如我们使用的一些第三方框架</span><br><span class="line">响应式编程思想：不需要考虑调用顺序，只需要知道考虑结果，类似于蝴蝶效应，产生一个事件，会影响很多东西，这些事件像流一样的传播出去，然后影响结果，借用面向对象的一句话，万物皆是流。</span><br><span class="line">函数式编程思想：是把操作尽量写成一系列嵌套的函数或者方法调用。</span><br><span class="line">ReactiveCocoa作用和导入使用</span><br><span class="line">ReactiveCocoa（RAC）是什么？</span><br><span class="line">ReactiveCocoa（其简称为 RAC）是由 Github 开源的一个应用于 iOS 和 OS X 开发的新框架。RAC 具有函数式编程和响应式编程的特性。它主要吸取了 .Net 的 Reactive Extensions 的设计和实现。</span><br><span class="line">ReactiveCocoa为事件提供了很多处理方法，而且利用RAC处理事件很方便，可以把要处理的事情，和监听的事情的代码放在一起，这样非常方便我们管理，就不需要跳到对应的方法里。非常符合我们开发中高聚合，低耦合的思想。作为一个iOS开发者，你写的每一行代码几乎都是在响应某个事件，例如按钮的点击，收到网络消息，属性的变化（通过KVO）或者用户位置的变化（通过CoreLocation）。但是这些事件都用不同的方式来处理，比如action、delegate、KVO、callback等。ReactiveCocoa为事件定义了一个标准接口，从而可以使用一些基本工具来更容易的连接、过滤和组合。</span><br><span class="line"></span><br><span class="line">我们采用cocoapods配置ReactiveCocoa</span><br><span class="line"></span><br><span class="line">切记ReactiveCocoa 4.10 最低部署版本为iOS8,笔者亲测</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">platform:ios,’<span class="number">8.0</span>’</span><br><span class="line">use_frameworks!</span><br><span class="line">pod ‘ReactiveCocoa’, ‘~&gt; <span class="number">4.1</span><span class="number">.0</span>’</span><br><span class="line"></span><br><span class="line">这样，我就成功导入ReactiveCocoa了！</span><br></pre></td></tr></table></figure>
 <p>本文是本人整合市面上一些主流说法，以及大量参考了原作者官方文档，感谢前辈们让我们站在巨人的肩膀上！</p>
 <p>同时也希望转载本文的读者能够注明[转载出处]:(wengwenyu.com)wengwenyu.com，我会在文章最末处注明参考文献，同时会附上本人示例工程。</p>
 <p>常言道：知其然，知其所以然<br>函数式响应式编程</p>
@@ -183,7 +181,7 @@
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Поиск">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:yoursite.com">
   </form>
 </div>
@@ -192,7 +190,7 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Entradas Recientes</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
     
       <li>
@@ -209,7 +207,7 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Метки</h3>
+  <h3 class="title">Tags</h3>
   <ul class="entry">
   
     <li><a href="/tags/ios/">ios</a><small>1</small></li>
@@ -220,7 +218,7 @@
 
   
 <div class="widget tagcloud">
-  <h3 class="title">Облако меток</h3>
+  <h3 class="title">Tag-Cloud</h3>
   <div class="entry">
     <a href="/tags/ios/" style="font-size: 10px;">ios</a>
   </div>
